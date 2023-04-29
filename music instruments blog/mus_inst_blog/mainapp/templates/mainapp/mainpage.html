@@ -1,0 +1,14 @@
+{% extends 'mainapp/index.html' %}
+
+{% block content %}
+<ul>
+    {% for i in intro %}
+    <li>
+        <h2>{{ i.title2 }}</h2>
+        <p>{{ i.text2 }}</p>
+        <hr>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock  %}

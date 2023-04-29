@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Может потребоваться изменить шапку, чтобы всё работало. -->
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link  type="text/css" href="{% static 'mainapp/css/styles.css' %}"  rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+</head>
+
+<body class="sitePage">
+
+    <header class="header">
+        <h4>История музыкальных инструментов</h4>
+    </header>
+    <div class="rightSide"></div>
+
+
+    <div class="content">
+{% block content %}
+{% endblock %}
+
+    </div>
+
+
+    <div class="leftSide">
+        <a href="{% url 'home' %}" class="home_link">Главная</a>
+        <a href="{% url 'wind' %}" class="navlink1">Духовые</a>
+        <a href="{% url 'stringed' %}" class="navlink2">Струнные</a>
+        <a href="{% url 'keyboards' %}" class="navlink3">Клавишные</a>
+        <a href="{% url 'drums' %}" class="navlink4">Ударные</a>
+        <a href="{% url 'bowed' %}" class="navlink5">Смычковые</a>
+    </div>
+
+    <div class="footer"></div>
+
+</body>
+</html>

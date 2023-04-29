@@ -1,0 +1,14 @@
+{% extends 'mainapp/index.html' %}
+
+{% block content %}
+<ul>
+    {% for m in mus_tab %}
+    <li>
+        <h2>{{ m.title1 }}</h2>
+        <p>{{ m.text1|linebreaks }}</p>
+        <hr>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock  %}
